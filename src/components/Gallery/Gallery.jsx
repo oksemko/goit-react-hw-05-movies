@@ -50,7 +50,7 @@ export function Gallery({ data }) {
                           : placeholderImg
                       }
                       alt={original_title}
-                      loading="lazy";
+                      loading="lazy"
                     />
                   </Poster>
                   <Description>
