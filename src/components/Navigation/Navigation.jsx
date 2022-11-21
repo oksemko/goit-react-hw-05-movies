@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { Container } from 'CommonStyled/Common.styled';
 
-import { Nav, MenuItem } from './Navigation.styled,jsx';
+import { Nav, MenuItem } from './Navigation.styled.jsx';
 
 
 export const Navigation = () => {

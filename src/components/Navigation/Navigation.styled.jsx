@@ -10,5 +10,3 @@ export const Nav = styled.ul`
 export const MenuItem = styled.li`
   margin-left: 30px;
 `;
-Footer
-© 2022 GitHub, Inc.
