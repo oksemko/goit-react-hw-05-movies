@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import * as movieAPI from '../../services/movie-api';
+import * as movieAPI from '../../../services/movie-api';
 
-export default function Review() {
+export default function Review({ movieId }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -10,8 +10,7 @@ export default function Review() {
       setData(null);
     }
   }, [movieId]);
-  return
-  <>
+  return <>
     {data?.results?.lengh ?
       <ReviewData data={data} />
       : <NoData />}
@@ -19,13 +18,12 @@ export default function Review() {
 }
 
 function NoData() {
-  return
-  <>
+  return <>
     Nothing found
   </>
 }
 
-function ReviewData(data) {
+function ReviewData({ data }) {
   return (
     <>
       <ul>

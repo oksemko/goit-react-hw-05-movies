@@ -3,15 +3,20 @@ import icon from '../../../images/search.svg';
 
 export const SearchForm = styled.form`
   position: relative;
-  padding-left: 30px;
   display: flex;
   align-items: center;
   width: 100%;
+  // padding-left: 30px;
   margin-bottom: 30px;
-  background-color: #fff;
-  border-radius: 3px;
-  overflow: hidden;
-  box-sizing: border-box;
+  background-color: #1fd1f9;
+  border-radius: 5px;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    box-shadow: 0px 0px 0px 0px rgba(0, 65, 200, 0.5),
+            0px 5px 5px 5px rgba(0,65,200,0.5),
+            0px 5px 15px 5px rgba(0,65,200,0.5),
+            0px 5px 25px 5px rgba(0,65,200,0.5);
+            border-radius: 10px;
+            margin-bottom: 20px;
 `;
 
 export const Button = styled.button`

@@ -1,13 +1,19 @@
 import { Link } from 'react-router-dom';
+import defaultImage from './nothing-to-see-here.png';
+
+import { Container, Image, Span } from './NotFound.styled';
 
 
 export default function NotFound() {
+  const image = defaultImage;
+
   return (
-    <div>
-      <h2>Sorry, there is nothing to see ... 👀</h2>
-      <p>
+    <Container>
+      <Span>Sorry, there is nothing to see ... 👀</Span>
+      <Image img src={image} alt=""></Image>
+      <Link>
         <Link to="/">Please go back to the home page</Link>
-      </p>
-    </div>
+      </Link>
+    </Container>
   );
 }

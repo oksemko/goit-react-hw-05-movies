@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-import * as movieAPI from '../../../service/movie-api';
-import { Gallery } from "../../Gallery/Gallery";
+import * as movieAPI from '../../../services/movie-api';
+import { Gallery } from '../../Gallery/Gallery';
 
 
 export function HomePage() {
@@ -11,8 +11,7 @@ export function HomePage() {
     movieAPI.fetchTrending().then(setData);
   }, []);
 
-  return
-  <>
+  return <>
     {data && <Gallery data={data} />}
   </>;
 }

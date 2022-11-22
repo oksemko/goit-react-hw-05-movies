@@ -7,7 +7,7 @@ async function fetchWithErrorHandling(url = '', config = {}) {
     : Promise.reject(new Error('Not Found'));
 }
 
-export function fetchTrading() {
+export function fetchTrending() {
   fetchGenres();
   return fetchWithErrorHandling(
     `https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`

@@ -1,12 +1,12 @@
 import { useState, lazy, useEffect } from 'react';
-import * as movieAPI from '../../services/movie-api';
+import * as movieAPI from '../../../services/movie-api';
 import { Gallery } from 'components/Gallery/Gallery';
 
 import { SearchForm, Button, Label, Input } from './MoviesPage.styled';
 import { useSearchParams, useLocation } from 'react-router-dom';
 
 
-const NotFoundPage = lazy(() => import('../NotFound/NotFound.js'));
+const NotFoundPage = lazy(() => import('../NotFound/NotFound'));
 
 export default function MoviesPage() {
   const [searchQuery, setSearchQuery] = useState('');

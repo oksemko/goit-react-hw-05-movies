@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import * as movieAPI from '../../services/movie-api';
+import * as movieAPI from '../../../services/movie-api';
 import { Board, Card, Image, Text } from './Cast.styled';
 
 
@@ -12,6 +12,7 @@ export default function Cast({movieId}) {
       setData(null);
     };
   }, [movieId]);
+
   return (
     <>
       <Board>

@@ -1,6 +1,6 @@
 import { useParams, Link, Routes, Route, useLocation } from 'react-router-dom';
 import { useState, useEffect, Suspense, lazy } from 'react';
-import * as movieAPI from '../../services/movie-api';
+import * as movieAPI from '../../../services/movie-api';
 
 
 import {
