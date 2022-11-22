@@ -46,7 +46,7 @@ export default function MoviesPage() {
           name="searchQuery"
           autoComplete="off"
           autoFocus
-          placeholder="Search movies ...👀"
+          placeholder="Search movies ... 🧐"
           value={searchQuery}
           onChange={handleInputChange}
         />

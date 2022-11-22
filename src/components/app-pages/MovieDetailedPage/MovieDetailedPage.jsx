@@ -86,7 +86,7 @@ export default function MovieDetailedPage() {
           </Description>
         </Wrapper>
       )}
-      <Suspense fallback={<div>Loading ...</div>}>
+      <Suspense fallback={<div>Loading ... ⌛</div>}>
         <Routes>
           <Route path="cast" element={<Cast movieId={movieId} />} />
           <Route path="reviews" element={<Review movieId={movieId} />} />
