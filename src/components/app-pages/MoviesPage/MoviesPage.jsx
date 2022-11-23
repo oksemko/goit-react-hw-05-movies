@@ -11,9 +11,9 @@ const NotFoundPage = lazy(() => import('../NotFound/NotFound'));
 export default function MoviesPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [data, setData] = useState(null);
-
    // eslint-disable-next-line no-unused-vars
   let [_, setSearchParams] = useSearchParams();
+
   const handleInputChange = event => {
     setSearchQuery(event.currentTarget.value);
   };
@@ -54,7 +54,7 @@ export default function MoviesPage() {
           <Label>Search</Label>
         </Button>
       </SearchForm>
-      {data?.results?.lengh ? <Gallery data={data} /> : <NotFoundPage />}
+      {data?.results?.length ? <Gallery data={data} /> : <NotFoundPage />}
     </>
   );
 }

@@ -27,7 +27,7 @@ import('../Review/Review.jsx')                 /*Here was used =>>> webpackChunk
 export default function MovieDetailedPage() {
   const [data, setData] = useState(null);
   const [path, setPath] = useState('/');
-  const [movieId] = useParams();
+  const { movieId } = useParams();
 
   useEffect(() => {
     movieAPI.fetchDetails(movieId).then(setData);

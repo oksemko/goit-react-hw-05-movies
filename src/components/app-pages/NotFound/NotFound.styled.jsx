@@ -28,7 +28,7 @@ color: #020024;
   // margin-left: 15px;
 `
 
-export const Link = styled.link`
+export const Link = styled.p`
 font-family: Roboto, Arial, sans-serif;
 font-size: 20px;
 font-weight: 700;

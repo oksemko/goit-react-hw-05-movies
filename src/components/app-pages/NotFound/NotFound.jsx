@@ -11,9 +11,9 @@ export default function NotFound() {
     <Container>
       <Span>Sorry, there is nothing to see ... 👀</Span>
       <Image img src={image} alt=""></Image>
-      <Link>
+      <p>
         <Link to="/">Please go back to the home page</Link>
-      </Link>
+      </p>
     </Container>
   );
 }
