@@ -5,6 +5,8 @@ import { Gallery } from 'components/Gallery/Gallery';
 import { SearchForm, Button, Label, Input } from './MoviesPage.styled';
 import { useSearchParams, useLocation } from 'react-router-dom';
 
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 
 const NotFoundPage = lazy(() => import('../NotFound/NotFound'));
 
@@ -50,11 +52,14 @@ export default function MoviesPage() {
           value={searchQuery}
           onChange={handleInputChange}
         />
+
         <Button type="submit">
           <Label>Search</Label>
         </Button>
+
       </SearchForm>
       {data?.results?.length ? <Gallery data={data} /> : <NotFoundPage />}
+      { Notify.info(`Hooray! Here You can search ${searchQuery} movies. 🤩`) }
     </>
   );
 }

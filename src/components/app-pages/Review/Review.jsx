@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import * as movieAPI from '../../../services/movie-api';
+import { Span } from './Review.styled';
+
 
 export default function Review({ movieId }) {
   const [data, setData] = useState(null);
@@ -10,16 +12,12 @@ export default function Review({ movieId }) {
       setData(null);
     }
   }, [movieId]);
-  return <>
-    {data?.results?.lengh ?
-      <ReviewData data={data} />
-      : <NoData />}
-  </>
+  return <>{data?.results?.length ? <ReviewData data={data} /> : <NoData />}</>;
 }
 
 function NoData() {
   return <>
-    Nothing found
+    <Span>Sorry, there is nothing for review ... </Span>👀
   </>
 }
 
@@ -27,7 +25,8 @@ function ReviewData({ data }) {
   return (
     <>
       <ul>
-        {data.results.map(review => {
+        {data &&
+          data.results.map(review => {
           return (
             <li key={review.id}>
               <p>Author: {review.author}</p>
