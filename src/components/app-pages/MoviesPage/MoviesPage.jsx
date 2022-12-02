@@ -38,6 +38,7 @@ export default function MoviesPage() {
     movieAPI.fetchSearch(normalizeSearchQuery).then(setData);
     setSearchParams(`query=${normalizeSearchQuery}`);
     // setSearchQuery('');
+  // eslint-disable-next-line
     { Notify.info(`Hooray! You found ${searchQuery}. 🤩 Relax & review !`) }
   }
 
