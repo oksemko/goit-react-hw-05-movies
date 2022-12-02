@@ -12,10 +12,11 @@ export function HomePage() {
 
   useEffect(() => {
     movieAPI.fetchTrending().then(setData);
+  // eslint-disable-next-line
+    { Notify.info(`Hello! Here You can review trending movies. 🤩`) }
   }, []);
 
   return <>
     {data && <Gallery data={data} />}
-    { Notify.info(`Hello! Here You can review trending movies. 🤩`) }
   </>;
 }

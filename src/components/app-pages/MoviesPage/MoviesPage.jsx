@@ -38,7 +38,9 @@ export default function MoviesPage() {
     movieAPI.fetchSearch(normalizeSearchQuery).then(setData);
     setSearchParams(`query=${normalizeSearchQuery}`);
     // setSearchQuery('');
+    { Notify.info(`Hooray! You found ${searchQuery}. 🤩 Relax & review !`) }
   }
+
 
   return (
     <>
@@ -59,7 +61,7 @@ export default function MoviesPage() {
 
       </SearchForm>
       {data?.results?.length ? <Gallery data={data} /> : <NotFoundPage />}
-      { Notify.info(`Hooray! Here You can search ${searchQuery} movies. 🤩`) }
+
     </>
   );
 }
